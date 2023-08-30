@@ -30,11 +30,9 @@
 1. Modified the code to take custom input from file defining the profile, goal and constraints.
 2. Modified the prompts to specifically create the entry "main.py" file.
 3. I tested to generate different programming langauge codes, but generated ones were also not complete. 
-4. Tried to implement the code for running a subprocess inside the project to run the current workspace.
+4. Trying to write code for running a subprocess within the project to execute the generated workspace (In progress). However, there is difficulty in extracting the workspace folder details from the environment memory. The idea is to run the code, catch any errors that occur, and then report these errors to the Engineer and ProjectManager so that they can take them into account in the next iteration. Ideally, the errors should be propagated back without having to restart the entire process.
 
 
 Complete Logs:
 > [Old Log](workspace/old/sudoku_game/log.txt)
 > [New Log](workspace/new/sudoku_game/log.txt)
-
-<!-- ### The concept is promising, but it is still in its early stages and a lot to build on it!  -->
