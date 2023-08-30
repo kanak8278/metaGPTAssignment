@@ -37,3 +37,6 @@ Complete Logs:
 > [Old Log](workspace/old/sudoku_game/log.txt)
 
 > [New Log](workspace/new/sudoku_game/log.txt)
+
+
+The shared image for the OpenAI usage is not the total usage. I also used someone else API and the total is less than $10.
