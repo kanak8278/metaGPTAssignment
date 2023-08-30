@@ -35,4 +35,5 @@
 
 Complete Logs:
 > [Old Log](workspace/old/sudoku_game/log.txt)
+
 > [New Log](workspace/new/sudoku_game/log.txt)
