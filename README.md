@@ -31,7 +31,10 @@
 2. Modified the prompts to specifically create the entry "main.py" file.
 3. I tested to generate different programming langauge codes, but generated ones were also not complete. 
 4. Trying to write code for running a subprocess within the project to execute the generated workspace (In progress). However, there is difficulty in extracting the workspace folder details from the environment memory. The idea is to run the code, catch any errors that occur, and then report these errors to the Engineer and ProjectManager so that they can take them into account in the next iteration. Ideally, the errors should be propagated back without having to restart the entire process.
-
+5. Other than Sudoku Project, I also tried with 2048 game, as it was the example mentioned in the paper. It didn't ran out of box.
+6. I also tried with a project which would not be very general, "Courses Review Webapp like IMDB". Didn't created any entry file, metaGPT missed multiple DataModels definitions, API definition, import error, etc. Also it didn't defined an entrypoint to insert a new course.
+When I gave a more explained prompt for making different end points and functionalities of insert, update, post review etc. It created the architecture for them but still lacked in the DataModel definition, import error, etc.
+  
 
 Complete Logs:
 > [Old Log](workspace/old/sudoku_game/log.txt)
