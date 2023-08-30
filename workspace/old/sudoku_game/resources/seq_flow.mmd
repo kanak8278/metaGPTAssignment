@@ -1,0 +1,26 @@
+sequenceDiagram
+    participant M as Main
+    participant G as Game
+    participant U as UI
+    participant P as Puzzles
+    participant S as Solver
+    participant F as File
+
+    M->>G: start_new_game(difficulty)
+    G->>P: generate_puzzle(difficulty)
+    P->>G: grid
+    G->>U: draw_grid(grid)
+    loop User interaction
+        U->>U: get_user_input()
+        G->>G: set_cell(row, col, value)
+        U->>U: draw_cell(row, col, value, editable)
+    end
+    G->>G: check_solution()
+    G->>U: display_message(message)
+    G->>U: get_hint()
+    U->>U: draw_cell(row, col, value, editable)
+    G->>F: save_game(file_path)
+    F-->>G: confirmation
+    G->>F: load_game(file_path)
+    F-->>G: grid
+    G->>U: draw_grid(grid)

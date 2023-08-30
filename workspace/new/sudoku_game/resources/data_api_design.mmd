@@ -1,0 +1,47 @@
+classDiagram
+    class Game{
+        -int score
+        -int time
+        -Grid grid
+        -Solver solver
+        +start_new_game(difficulty: str) -> None
+        +input_number(row: int, col: int, number: int) -> None
+        +check_solution() -> bool
+        +get_hint() -> Tuple[int, int, int]
+        +change_difficulty(difficulty: str) -> None
+    }
+    class Grid{
+        -List[List[Cell]] cells
+        +get_cell(row: int, col: int) -> Cell
+        +is_valid_move(row: int, col: int, number: int) -> bool
+        +is_complete() -> bool
+    }
+    class Cell{
+        -int value
+        -bool editable
+        +get_value() -> int
+        +set_value(value: int) -> None
+        +is_editable() -> bool
+    }
+    class Solver{
+        -Grid grid
+        +solve() -> bool
+    }
+    class Menu{
+        -List[str] difficulty_levels
+        +get_difficulty_levels() -> List[str]
+        +set_difficulty(difficulty: str) -> None
+    }
+    class Text{
+        -str text
+        -int size
+        -str color
+        -str font
+        +render() -> pygame.Surface
+    }
+    Game "1" -- "1" Grid: has
+    Game "1" -- "1" Solver: has
+    Game "1" -- "1" Menu: has
+    Game "1" -- "1" Text: has
+    Grid "1" -- "*" Cell: contains
+    Menu "1" -- "*" Text: contains

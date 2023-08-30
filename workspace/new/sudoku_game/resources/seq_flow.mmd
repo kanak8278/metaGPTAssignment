@@ -1,0 +1,29 @@
+sequenceDiagram
+    participant M as Main
+    participant G as Game
+    participant GD as Grid
+    participant C as Cell
+    participant S as Solver
+    participant MN as Menu
+    participant T as Text
+    ...
+    M->>G: start new game
+    G->>MN: get difficulty levels
+    MN->>M: return difficulty levels
+    M->>G: set difficulty
+    G->>GD: create grid
+    GD->>C: create cells
+    G->>S: create solver
+    M->>G: input number
+    G->>GD: get cell
+    GD->>C: set value
+    M->>G: check solution
+    G->>GD: is complete
+    GD->>C: get value
+    M->>G: get hint
+    G->>S: solve
+    S->>GD: get cell
+    GD->>C: get value
+    M->>G: change difficulty
+    G->>MN: set difficulty
+    M->>G: end game
