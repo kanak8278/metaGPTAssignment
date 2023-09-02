@@ -1,0 +1,25 @@
+sequenceDiagram
+    participant M as Main
+    participant G as Game
+    participant U as UI
+    participant S as Solver
+    participant D as Data
+
+    M->>G: start_new_game(difficulty)
+    G->>U: draw_grid(grid)
+    U->>U: draw_cell(row, col, value) for each cell in grid
+    M->>U: get_input()
+    U->>G: set_cell_value(row, col, value)
+    G->>G: is_valid_move(row, col, value)
+    G->>U: highlight_cell(row, col)
+    G->>G: is_complete()
+    G->>U: show_message("Game complete!")
+    G->>G: check_progress()
+    G->>U: show_message("Progress: X%")
+    G->>G: get_hint()
+    G->>U: highlight_cell(row, col)
+    M->>G: save_game()
+    D->>G: save_game_data()
+    M->>G: load_game()
+    D->>G: load_game_data()
+    G->>U: draw_grid(grid)

@@ -1,0 +1,31 @@
+classDiagram
+    class Game{
+        +start_new_game(difficulty: str) -> None
+        +check_progress() -> bool
+        +get_hint() -> Optional[Tuple[int, int]]
+        +save_game() -> None
+        +load_game() -> None
+    }
+    class Grid{
+        +set_cell_value(row: int, col: int, value: int) -> None
+        +get_cell_value(row: int, col: int) -> int
+        +is_valid_move(row: int, col: int, value: int) -> bool
+        +is_complete() -> bool
+    }
+    class Solver{
+        +solve(grid: Grid) -> bool
+    }
+    class UI{
+        +draw_grid(grid: Grid) -> None
+        +draw_cell(row: int, col: int, value: int) -> None
+        +highlight_cell(row: int, col: int) -> None
+        +get_input() -> Tuple[int, int, int]
+        +show_message(message: str) -> None
+    }
+    Game "1" -- "1" Grid: has
+    Game "1" -- "1" Solver: has
+    Game "1" -- "1" UI: has
+    Grid "1" -- "1" UI: has
+    Solver "1" -- "1" Grid: uses
+    UI "1" -- "1" Grid: uses
+    UI "1" -- "1" Solver: uses

@@ -9,19 +9,19 @@
 
 5. The Quadrant/Comparison Chart (Mermaid) is quite general and arbitrary. The axis and quadrant labels could be made more specific to the project. For example, Reach and Engagement may not be relevant metrics for a B2B product.
 
-6. Prompts are harcoded. Could be YAML/JSON file.
+6. ~~Prompts are harcoded. Could be YAML/JSON file.~~
 
-7. Several times, MetaGPT failed to generate a main or entry file for the project.
+7. ~~Several times, MetaGPT failed to generate a main or entry file for the project.~~
 
-8.  It begins with the entry file, importing functions/classes that need to be defined later, but then fails to implement those functionalities.
+8. It begins with the entry file, importing functions/classes that need to be defined later, but then fails to implement those functionalities.
 
 9. When creating a web app that requires multiple ports, such as for the backend and database, conflicts in port allocation can arise.
 
 10. More Specific Roles could be added like Frontend & Backend Developer.
 
-11. I would have liked a funcitonality of writing a Dockerfile for the project.
+11. ~~I would have liked a funcitonality of writing a Dockerfile for the project.~~
 
-12. Python only support, if you ask for other language specifically, "Build a Sudoku game in JavaScript", still doesn't work. Even after modifying/removing the inbuilt ("Follow PEP8 standard") prompt.
+12. Python only support, if you ask for other language specifically, "Build a Sudoku game in JavaScript", still doesn't work. Even after modifying/removing the inbuilt ("Follow PEP8 standard") prompt. There are multiple action prompts in the project and they are structured for Python only(Later).
  
 
 
@@ -29,6 +29,7 @@
 
 1. Modified the code to take custom input from file defining the profile, goal and constraints.
 2. Modified the prompts to specifically create the entry "main.py" file.
+3. Functionality of Writing a Dockerfile. Copies the files from folder, expose ports, install requirements, etc.
 3. I tested to generate different programming langauge codes, but generated ones were also not complete. 
 4. Trying to write code for running a subprocess within the project to execute the generated workspace (In progress). However, there is difficulty in extracting the workspace folder details from the environment memory. The idea is to run the code, catch any errors that occur, and then report these errors to the Engineer and ProjectManager so that they can take them into account in the next iteration. Ideally, the errors should be propagated back without having to restart the entire process.
 5. Other than Sudoku Project, I also tried with 2048 game, as it was the example mentioned in the paper. It didn't ran out of box.
