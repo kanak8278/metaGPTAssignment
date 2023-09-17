@@ -1,0 +1,38 @@
+classDiagram
+    class SudokuGame{
+        +start_new_game(difficulty: str) -> None
+        +input_number(row: int, col: int, number: int) -> None
+        +pause_game() -> None
+        +resume_game() -> None
+        +get_hint() -> Tuple[int, int, int]
+        +check_progress() -> int
+    }
+    class SudokuGrid{
+        +__init__() -> None
+        +get_cell(row: int, col: int) -> int
+        +set_cell(row: int, col: int, number: int) -> None
+        +is_valid_move(row: int, col: int, number: int) -> bool
+        +is_complete() -> bool
+    }
+    class SudokuUI{
+        +__init__(grid: SudokuGrid) -> None
+        +draw() -> None
+        +handle_input() -> None
+        +show_hint(row: int, col: int, number: int) -> None
+        +show_progress(correct_cells: int) -> None
+    }
+    class SudokuSolver{
+        +__init__(grid: SudokuGrid) -> None
+        +solve() -> bool
+        +get_solution() -> SudokuGrid
+    }
+    class Utils{
+        +generate_sudoku(difficulty: str) -> SudokuGrid
+    }
+    SudokuGame "1" -- "1" SudokuGrid: has
+    SudokuGame "1" -- "1" SudokuUI: has
+    SudokuGame "1" -- "1" SudokuSolver: has
+    SudokuGrid "1" -- "1" SudokuSolver: uses
+    SudokuUI "1" -- "1" SudokuGrid: uses
+    SudokuSolver "1" -- "1" SudokuGrid: uses
+    SudokuSolver "1" -- "1" Utils: uses

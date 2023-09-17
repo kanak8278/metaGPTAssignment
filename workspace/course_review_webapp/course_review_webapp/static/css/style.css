@@ -1,0 +1,108 @@
+## static/css/style.css
+
+/* Global Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  margin: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Homepage Styles */
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.error {
+  color: red;
+}
+
+/* Course Details Styles */
+
+textarea {
+  width: 100%;
+  height: 100px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+/* Login/Signup Styles */
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"] {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+/* Filter/Sort Styles */
+
+select {
+  margin-top: 10px;
+  padding: 5px;
+}

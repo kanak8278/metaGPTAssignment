@@ -1,0 +1,8 @@
+[submodule "path/to/submodule"]
+	path = path/to/submodule
+	url = https://github.com/kanak8278/MetaGPT.git
+	branch = code_analysis
+[submodule "MetaGPT"]
+	path = MetaGPT
+	url = https://github.com/kanak8278/MetaGPT.git
+	branch = code_analysis

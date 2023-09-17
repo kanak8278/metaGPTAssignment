@@ -1,0 +1,150 @@
+Pylint analysis for ./workspace/new/sudoku_game_02/sudoku_game/grid.py:
+************* Module grid
+workspace/new/sudoku_game_02/sudoku_game/grid.py:38:9: W0511: TODO: Implement drawing logic for the Sudoku grid (fixme)
+workspace/new/sudoku_game_02/sudoku_game/grid.py:42:9: W0511: TODO: Implement input handling logic for the Sudoku grid (fixme)
+workspace/new/sudoku_game_02/sudoku_game/grid.py:46:9: W0511: TODO: Implement logic to show a hint to the player (fixme)
+workspace/new/sudoku_game_02/sudoku_game/grid.py:50:9: W0511: TODO: Implement logic to show the player's progress (fixme)
+workspace/new/sudoku_game_02/sudoku_game/grid.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+workspace/new/sudoku_game_02/sudoku_game/grid.py:3:0: C0115: Missing class docstring (missing-class-docstring)
+workspace/new/sudoku_game_02/sudoku_game/grid.py:7:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/grid.py:10:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/grid.py:13:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/grid.py:15:15: R1714: Consider merging these comparisons with 'in' by using 'number in (self.grid[row][i], self.grid[i][col])'. Use a set instead if elements are hashable. (consider-using-in)
+workspace/new/sudoku_game_02/sudoku_game/grid.py:27:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/grid.py:33:0: C0115: Missing class docstring (missing-class-docstring)
+workspace/new/sudoku_game_02/sudoku_game/grid.py:37:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/grid.py:41:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/grid.py:45:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/grid.py:49:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/grid.py:1:0: W0611: Unused Tuple imported from typing (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 5.14/10 (previous run: 7.04/10, -1.89)
+
+
+
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/grid.py at line 38: # TODO: Implement drawing logic for the Sudoku grid
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/grid.py at line 42: # TODO: Implement input handling logic for the Sudoku grid
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/grid.py at line 46: # TODO: Implement logic to show a hint to the player
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/grid.py at line 50: # TODO: Implement logic to show the player's progress
+Pylint analysis for ./workspace/new/sudoku_game_02/sudoku_game/ui.py:
+************* Module ui
+workspace/new/sudoku_game_02/sudoku_game/ui.py:8:9: W0511: TODO: Implement drawing logic for the Sudoku grid (fixme)
+workspace/new/sudoku_game_02/sudoku_game/ui.py:12:9: W0511: TODO: Implement input handling logic for the Sudoku grid (fixme)
+workspace/new/sudoku_game_02/sudoku_game/ui.py:16:9: W0511: TODO: Implement logic to show a hint to the player (fixme)
+workspace/new/sudoku_game_02/sudoku_game/ui.py:20:9: W0511: TODO: Implement logic to show the player's progress (fixme)
+workspace/new/sudoku_game_02/sudoku_game/ui.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+workspace/new/sudoku_game_02/sudoku_game/ui.py:3:0: C0115: Missing class docstring (missing-class-docstring)
+workspace/new/sudoku_game_02/sudoku_game/ui.py:4:29: E0602: Undefined variable 'SudokuGrid' (undefined-variable)
+workspace/new/sudoku_game_02/sudoku_game/ui.py:7:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/ui.py:11:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/ui.py:15:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/ui.py:19:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/ui.py:1:0: W0611: Unused Tuple imported from typing (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
+
+
+
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/ui.py at line 8: # TODO: Implement drawing logic for the Sudoku grid
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/ui.py at line 12: # TODO: Implement input handling logic for the Sudoku grid
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/ui.py at line 16: # TODO: Implement logic to show a hint to the player
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/ui.py at line 20: # TODO: Implement logic to show the player's progress
+Pylint analysis for ./workspace/new/sudoku_game_02/sudoku_game/utils.py:
+************* Module utils
+workspace/new/sudoku_game_02/sudoku_game/utils.py:68:0: C0301: Line too long (101/100) (line-too-long)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:38:9: W0511: TODO: Implement drawing logic for the Sudoku grid (fixme)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:42:9: W0511: TODO: Implement input handling logic for the Sudoku grid (fixme)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:46:9: W0511: TODO: Implement logic to show a hint to the player (fixme)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:50:9: W0511: TODO: Implement logic to show the player's progress (fixme)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:58:9: W0511: TODO: Implement backtracking algorithm to solve the Sudoku grid (fixme)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:62:9: W0511: TODO: Implement logic to return the solved Sudoku grid (fixme)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:68:9: W0511: TODO: Implement logic to generate a new Sudoku grid based on the specified difficulty level (fixme)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:3:0: C0115: Missing class docstring (missing-class-docstring)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:7:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:10:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:13:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:15:15: R1714: Consider merging these comparisons with 'in' by using 'number in (self.grid[row][i], self.grid[i][col])'. Use a set instead if elements are hashable. (consider-using-in)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:27:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:33:0: C0115: Missing class docstring (missing-class-docstring)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:37:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:41:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:45:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:49:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:53:0: C0115: Missing class docstring (missing-class-docstring)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:57:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:61:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:65:0: C0115: Missing class docstring (missing-class-docstring)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:67:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:65:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+workspace/new/sudoku_game_02/sudoku_game/utils.py:1:0: W0611: Unused Tuple imported from typing (unused-import)
+
+-----------------------------------
+Your code has been rated at 4.00/10
+
+
+
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/utils.py at line 38: # TODO: Implement drawing logic for the Sudoku grid
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/utils.py at line 42: # TODO: Implement input handling logic for the Sudoku grid
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/utils.py at line 46: # TODO: Implement logic to show a hint to the player
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/utils.py at line 50: # TODO: Implement logic to show the player's progress
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/utils.py at line 58: # TODO: Implement backtracking algorithm to solve the Sudoku grid
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/utils.py at line 62: # TODO: Implement logic to return the solved Sudoku grid
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/utils.py at line 68: # TODO: Implement logic to generate a new Sudoku grid based on the specified difficulty level
+Pylint analysis for ./workspace/new/sudoku_game_02/sudoku_game/main.py:
+************* Module main
+workspace/new/sudoku_game_02/sudoku_game/main.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+workspace/new/sudoku_game_02/sudoku_game/main.py:1:0: E0401: Unable to import 'pygame' (import-error)
+workspace/new/sudoku_game_02/sudoku_game/main.py:2:0: E0001: Cannot import 'sudoku' due to 'expected an indented block after function definition on line 70 (<unknown>, line 73)' (syntax-error)
+workspace/new/sudoku_game_02/sudoku_game/main.py:5:0: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/main.py:8:4: C0103: Variable name "ui" doesn't conform to snake_case naming style (invalid-name)
+
+------------------------------------------------------------------
+Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
+
+
+
+
+Pylint analysis for ./workspace/new/sudoku_game_02/sudoku_game/sudoku.py:
+************* Module sudoku
+workspace/new/sudoku_game_02/sudoku_game/sudoku.py:73:5: E0001: Parsing failed: 'expected an indented block after function definition on line 70 (<unknown>, line 73)' (syntax-error)
+
+Error in AST parsing for ./workspace/new/sudoku_game_02/sudoku_game/sudoku.py: expected an indented block after function definition on line 70 (<unknown>, line 73)
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/sudoku.py at line 71: # TODO: Implement drawing logic for the Sudoku grid
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/sudoku.py at line 74: # TODO: Implement input handling logic for the Sudoku grid
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/sudoku.py at line 77: # TODO: Implement logic to show a hint to the player
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/sudoku.py at line 80: # TODO: Implement logic to show the player's progress
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/sudoku.py at line 88: # TODO: Implement backtracking algorithm to solve the Sudoku grid
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/sudoku.py at line 91: # TODO: Implement logic to return the solved Sudoku grid
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/sudoku.py at line 97: # TODO: Implement logic to generate a new Sudoku grid based on the specified difficulty level
+Pylint analysis for ./workspace/new/sudoku_game_02/sudoku_game/solver.py:
+************* Module solver
+workspace/new/sudoku_game_02/sudoku_game/solver.py:38:9: W0511: TODO: Implement drawing logic for the Sudoku grid (fixme)
+workspace/new/sudoku_game_02/sudoku_game/solver.py:42:9: W0511: TODO: Implement input handling logic for the Sudoku grid (fixme)
+workspace/new/sudoku_game_02/sudoku_game/solver.py:46:9: W0511: TODO: Implement logic to show a hint to the player (fixme)
+workspace/new/sudoku_game_02/sudoku_game/solver.py:50:9: W0511: TODO: Implement logic to show the player's progress (fixme)
+workspace/new/sudoku_game_02/sudoku_game/solver.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+workspace/new/sudoku_game_02/sudoku_game/solver.py:3:0: C0115: Missing class docstring (missing-class-docstring)
+workspace/new/sudoku_game_02/sudoku_game/solver.py:7:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/solver.py:10:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/solver.py:13:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/solver.py:15:15: R1714: Consider merging these comparisons with 'in' by using 'number in (self.grid[row][i], self.grid[i][col])'. Use a set instead if elements are hashable. (consider-using-in)
+workspace/new/sudoku_game_02/sudoku_game/solver.py:27:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/solver.py:33:0: C0115: Missing class docstring (missing-class-docstring)
+workspace/new/sudoku_game_02/sudoku_game/solver.py:37:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/solver.py:41:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/solver.py:45:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/solver.py:49:4: C0116: Missing function or method docstring (missing-function-docstring)
+workspace/new/sudoku_game_02/sudoku_game/solver.py:1:0: W0611: Unused Tuple imported from typing (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 5.14/10 (previous run: 3.85/10, +1.30)
+
+
+
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/solver.py at line 38: # TODO: Implement drawing logic for the Sudoku grid
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/solver.py at line 42: # TODO: Implement input handling logic for the Sudoku grid
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/solver.py at line 46: # TODO: Implement logic to show a hint to the player
+Incomplete code found in ./workspace/new/sudoku_game_02/sudoku_game/solver.py at line 50: # TODO: Implement logic to show the player's progress

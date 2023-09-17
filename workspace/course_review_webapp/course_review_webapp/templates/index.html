@@ -1,0 +1,55 @@
+## templates/index.html
+
+"""
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Review Webapp</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <header>
+        <h1>Course Review Webapp</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Search Courses</h2>
+        <form action="{% url 'filter_courses' %}" method="POST">
+            {% csrf_token %}
+            <input type="number" name="rating" placeholder="Minimum Rating" required>
+            <button type="submit">Filter</button>
+        </form>
+        <form action="{% url 'sort_courses' %}" method="POST">
+            {% csrf_token %}
+            <select name="sort_by">
+                <option value="rating">Sort by Rating</option>
+                <option value="reviews">Sort by Number of Reviews</option>
+            </select>
+            <button type="submit">Sort</button>
+        </form>
+        <h2>All Courses</h2>
+        <ul>
+            {% for course in courses %}
+            <li>
+                <h3>{{ course.title }}</h3>
+                <p>{{ course.description }}</p>
+                <p>Average Rating: {{ course.average_rating }}</p>
+                <a href="{% url 'course_details' course.id %}">View Details</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2021 Course Review Webapp. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+"""

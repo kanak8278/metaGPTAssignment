@@ -1,0 +1,42 @@
+## templates/login.html ##
+
+"""
+<!-- templates/login.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Review Webapp - Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <header>
+        <h1>Course Review Webapp</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Login</h2>
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2021 Course Review Webapp. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+"""

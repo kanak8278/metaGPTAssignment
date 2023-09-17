@@ -1,0 +1,24 @@
+sequenceDiagram
+    participant Main as Main
+    participant Game as SudokuGame
+    participant Grid as SudokuGrid
+    participant UI as SudokuUI
+    participant Solver as SudokuSolver
+    participant Utils as Utils
+    Main->>Game: start_new_game(difficulty)
+    Game->>Grid: __init__()
+    Game->>UI: __init__(grid)
+    Main->>UI: draw()
+    Main->>UI: handle_input()
+    UI->>Game: input_number(row, col, number)
+    Game->>Grid: set_cell(row, col, number)
+    Grid->>Grid: is_valid_move(row, col, number)
+    Grid->>Grid: is_complete()
+    Game->>UI: show_hint(row, col, number)
+    Game->>UI: show_progress(correct_cells)
+    Main->>Game: pause_game()
+    Main->>Game: resume_game()
+    Solver->>Solver: __init__(grid)
+    Solver->>Solver: solve()
+    Solver->>Solver: get_solution()
+    Utils->>Utils: generate_sudoku(difficulty)

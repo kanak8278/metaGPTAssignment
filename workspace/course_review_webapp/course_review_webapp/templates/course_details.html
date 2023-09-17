@@ -1,0 +1,49 @@
+<!-- templates/course_details.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Review Webapp - Course Details</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <header>
+        <h1>Course Review Webapp</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Course Details</h2>
+        <h3>{{ course.title }}</h3>
+        <p>{{ course.description }}</p>
+        <p>Average Rating: {{ course.average_rating }}</p>
+        <h3>Reviews</h3>
+        <ul>
+            {% for review in reviews %}
+            <li>
+                <p>User: {{ review.user }}</p>
+                <p>Rating: {{ review.rating }}</p>
+                <p>Comments: {{ review.comments }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+        <h3>Leave a Review</h3>
+        <form action="{% url 'create_review' course.id %}" method="POST">
+            {% csrf_token %}
+            <label for="rating">Rating:</label>
+            <input type="number" name="rating" min="1" max="5" required>
+            <label for="comments">Comments:</label>
+            <textarea name="comments" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2021 Course Review Webapp. All rights reserved.</p>
+    </footer>
+</body>
+</html>

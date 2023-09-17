@@ -1,0 +1,46 @@
+classDiagram
+    class User{
+        +username: str
+        +email: str
+        +password: str
+        +create_account(): None
+        +login(): None
+        +logout(): None
+    }
+    class Course{
+        +title: str
+        +description: str
+        +average_rating: float
+        +reviews: List[Review]
+        +get_average_rating(): float
+    }
+    class Review{
+        +user: User
+        +course: Course
+        +rating: int
+        +comments: str
+        +create_review(): None
+    }
+    class Search{
+        +query: str
+        +search_courses(): List[Course]
+    }
+    class Filter{
+        +rating: int
+        +filter_courses(): List[Course]
+    }
+    class Sort{
+        +sort_by: str
+        +sort_courses(): List[Course]
+    }
+    class Authentication{
+        +user: User
+        +create_account(): None
+        +login(): None
+        +logout(): None
+    }
+    User "1" -- "1" Authentication: has
+    Course "1" -- "0..*" Review: has
+    Search "1" -- "1" Course: has
+    Filter "1" -- "1" Course: has
+    Sort "1" -- "1" Course: has

@@ -1,0 +1,36 @@
+sequenceDiagram
+    participant User as U
+    participant Authentication as A
+    participant Search as S
+    participant Course as C
+    participant Review as R
+    participant Filter as F
+    participant Sort as So
+    participant WebApp as W
+    U->>W: Open web app
+    W->>A: Check if user is logged in
+    A-->>W: User is not logged in
+    W->>W: Display login/signup page
+    U->>W: Enter login/signup details
+    W->>A: Create account/login
+    A-->>W: Account created/logged in
+    W->>W: Display homepage with search bar
+    U->>W: Enter search query
+    W->>S: Search courses based on query
+    S-->>W: List of courses matching query
+    U->>W: Click on a course
+    W->>C: Display course details
+    C->>W: Display average rating and reviews
+    U->>W: Leave a review and rate the course
+    W->>R: Create review for the course
+    R-->>W: Review created
+    U->>W: Filter courses based on rating
+    W->>F: Filter courses based on rating
+    F-->>W: List of filtered courses
+    U->>W: Sort courses based on rating
+    W->>So: Sort courses based on rating
+    So-->>W: List of sorted courses
+    U->>W: Logout
+    W->>A: Logout user
+    A-->>W: User logged out
+    W->>W: Display login/signup page

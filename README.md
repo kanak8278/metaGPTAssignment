@@ -1,3 +1,7 @@
+## MetaGPT repository:
+Original: [https://github.com/geekan/MetaGPT](https://github.com/geekan/MetaGPT)
+Modified: [https://github.com/kanak8278/MetaGPT/tree/code_analysis](https://github.com/kanak8278/MetaGPT/tree/code_analysis)
+
 ## Insights on the approach:
 1.  The Waterfall model of software development used here is quite basic and outdated. At the very least, there should be a feedback loop from subsequent roles to update previous ones. For example, when reviewing an engineer's feedback that "Implementation of Solving Sudoku is not mentioned," this should be fed back to the Product Manager or Architect.
 
@@ -23,7 +27,7 @@
 
 12. Python only support, if you ask for other language specifically, "Build a Sudoku game in JavaScript", still doesn't work. Even after modifying/removing the inbuilt ("Follow PEP8 standard") prompt. There are multiple action prompts in the project and they are structured for Python only(Later).
  
-
+13. The MetaGPT code has Code_Review parameter which does review with the help of LLM. While LLM can look into the logical errors, we can implement something like `pylint` or `custom` functions to identify the syntax mistake or implementation not found or import not exists kind of error. This can be very helpful and can increase the code readibility. Check this [analysis](workspace/new/sudoku_game_02/analysis_report.txt)
 
 ## Changes in the code:
 
@@ -33,16 +37,29 @@
 4. Added timestamp while writing the logs for each project. This will make individual log file for each project and will it easy to identify the logs.
 
 5. I tested to generate different programming langauge codes, but generated ones were also not complete. 
-6. Trying to write code for running a subprocess within the project to execute the generated workspace (In progress). However, there is difficulty in extracting the workspace folder details from the environment memory. The idea is to run the code, catch any errors that occur, and then report these errors to the Engineer and ProjectManager so that they can take them into account in the next iteration. Ideally, the errors should be propagated back without having to restart the entire process.
-7. Other than Sudoku Project, I also tried with 2048 game, as it was the example mentioned in the paper. It didn't ran out of box.
-8. I also tried with a project which would not be very general, "Courses Review Webapp like IMDB". Didn't created any entry file, metaGPT missed multiple DataModels definitions, API definition, import error, etc. Also it didn't defined an entrypoint to insert a new course.
+
+6. ~~Trying to write code for running a subprocess within the project to execute the generated workspace (In progress). However, there is difficulty in extracting the workspace folder details from the environment memory. The idea is to run the code, catch any errors that occur, and then report these errors to the Engineer and ProjectManager so that they can take them into account in the next iteration. Ideally, the errors should be propagated back without having to restart the entire process.~~ I have tried to implement it with os.subprocess, but may be an overkill, we don't know what could be the requirements of the project.
+Insight Point-13 makes more sense.
+
+7. Tried to implement a CodeAnalyzer Role so that will analyze the complete code once generated using pylint and some custom functions. Integrating the functionality is still tough and am not been able to check out that It works on all the scenarios. Code: [ProjectAnalyzer](MetaGPT/metagpt/roles/project_analyzer.py)
+> We need to make this part run compulsorily, but the generated workspace access is only inside the [SoftwareCompany](MetaGPT/startup.py#L38) class and that is depended on `n_rounds` parameter.
+
+> Also, I wanted to run this analysis after generation of each file, but the way `pylint` works is that it looks into the whole project code and once and running of individual files independently would give irrelevant warnings. 
+
+> Code: [project_code_analysis.py](project_code_analysis.py) 
+
+8. Other than Sudoku Project, I also tried with 2048 game, as it was the example mentioned in the paper. It didn't ran out of box.
+
+9. I also tried with a project which would not be very general, "Courses Review Webapp like IMDB". Didn't created any entry file, metaGPT missed multiple DataModels definitions, API definition, import error, etc. Also it didn't defined an entrypoint to insert a new course.
 When I gave a more explained prompt for making different end points and functionalities of insert, update, post review etc. It created the architecture for them but still lacked in the DataModel definition, import error, etc.
-  
+
+10. The issue that model is several time lacking information of the software need to be coded, I added prompt to add more information about the working in write_prd.py. [Explaination](MetaGPT/metagpt/actions/write_prd.py/#L156).
+
 
 Complete Logs:
 > [Old Log](workspace/old/sudoku_game/log.txt)
 
-> [New Log](workspace/new/sudoku_game/log.txt)
+> [New Log](workspace/new/sudoku_game_02/log.txt)
 
 
 The shared image for the OpenAI usage is not the total usage. I also used someone else API and the total is less than $10.
