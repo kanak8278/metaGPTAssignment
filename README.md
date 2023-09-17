@@ -24,7 +24,7 @@
 
 10. More Specific Roles could be added like Frontend & Backend Developer.
 
-11. ~~I would have liked a funcitonality of writing a Dockerfile for the project.~~
+11. ~~I would have liked a funcitonality of writing a Dockerfile for the project.~~ 
 
 12. Python only support, if you ask for other language specifically, "Build a Sudoku game in JavaScript", still doesn't work. Even after modifying/removing the inbuilt ("Follow PEP8 standard") prompt. There are multiple action prompts in the project and they are structured for Python only(Later).
  
@@ -34,7 +34,7 @@
 
 1. Modified the code to take custom input from file defining the profile, goal and constraints.
 2. Modified the prompts to specifically create the entry "main.py" file.
-3. Functionality of Writing a Dockerfile. Copies the files from folder, expose ports, install requirements, etc.
+3. Functionality of Writing a Dockerfile. Copies the files from folder, expose ports, install requirements, etc. [project_management.py](https://github.com/kanak8278/MetaGPT/blob/55f278cda3611b71ad881b97dbf75c9d55a4c938/metagpt/actions/project_management.py#L29)
 4. Added timestamp while writing the logs for each project. This will make individual log file for each project and will it easy to identify the logs.
 
 5. I tested to generate different programming langauge codes, but generated ones were also not complete. 
@@ -52,9 +52,11 @@ Insight Point-13 makes more sense.
 8. Other than Sudoku Project, I also tried with 2048 game, as it was the example mentioned in the paper. It didn't ran out of box.
 
 9. I also tried with a project which would not be very general, "Courses Review Webapp like IMDB". Didn't created any entry file, metaGPT missed multiple DataModels definitions, API definition, import error, etc. Also it didn't defined an entrypoint to insert a new course.
-When I gave a more explained prompt for making different end points and functionalities of insert, update, post review etc. It created the architecture for them but still lacked in the DataModel definition, import error, etc. [Course_Review_Webapp](workspace/course_review_webapp)
-
-10. The issue that model is several time lacking information of the software need to be coded, I added prompt to add more information about the working in write_prd.py. [Explaination](https://github.com/kanak8278/MetaGPT/blob/55f278cda3611b71ad881b97dbf75c9d55a4c938/metagpt/actions/write_prd.py/#L156).
+When I gave a more explained prompt for making different end points and functionalities of insert, update, post review etc. It created the architecture for them but still lacked in the DataModel definition, import error, etc. 
+> I don't have the old generated project repository, (before the changes in metaGPT) 
+> New: [Course_Review_Webapp](workspace/course_review_webapp)
+ 
+10. The issue that model is several time lacking information of the software need to be coded, I added prompt to add more information about the working in write_prd.py. [Explnation](https://github.com/kanak8278/MetaGPT/blob/55f278cda3611b71ad881b97dbf75c9d55a4c938/metagpt/actions/write_prd.py/#L156).
 
 
 Complete Logs:
