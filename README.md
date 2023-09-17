@@ -1,6 +1,7 @@
 ## MetaGPT repository:
-Original: [https://github.com/geekan/MetaGPT](https://github.com/geekan/MetaGPT)
-Modified: [https://github.com/kanak8278/MetaGPT/tree/code_analysis](https://github.com/kanak8278/MetaGPT/tree/code_analysis)
+> Original: [https://github.com/geekan/MetaGPT](https://github.com/geekan/MetaGPT)
+
+> Modified: [https://github.com/kanak8278/MetaGPT/tree/code_analysis](https://github.com/kanak8278/MetaGPT/tree/code_analysis)
 
 ## Insights on the approach:
 1.  The Waterfall model of software development used here is quite basic and outdated. At the very least, there should be a feedback loop from subsequent roles to update previous ones. For example, when reviewing an engineer's feedback that "Implementation of Solving Sudoku is not mentioned," this should be fed back to the Product Manager or Architect.
@@ -41,8 +42,8 @@ Modified: [https://github.com/kanak8278/MetaGPT/tree/code_analysis](https://gith
 6. ~~Trying to write code for running a subprocess within the project to execute the generated workspace (In progress). However, there is difficulty in extracting the workspace folder details from the environment memory. The idea is to run the code, catch any errors that occur, and then report these errors to the Engineer and ProjectManager so that they can take them into account in the next iteration. Ideally, the errors should be propagated back without having to restart the entire process.~~ I have tried to implement it with os.subprocess, but may be an overkill, we don't know what could be the requirements of the project.
 Insight Point-13 makes more sense.
 
-7. Tried to implement a CodeAnalyzer Role so that will analyze the complete code once generated using pylint and some custom functions. Integrating the functionality is still tough and am not been able to check out that It works on all the scenarios. Code: [ProjectAnalyzer](MetaGPT/metagpt/roles/project_analyzer.py)
-> We need to make this part run compulsorily, but the generated workspace access is only inside the [SoftwareCompany](MetaGPT/startup.py#L38) class and that is depended on `n_rounds` parameter.
+7. Tried to implement a CodeAnalyzer Role so that will analyze the complete code once generated using pylint and some custom functions. Integrating the functionality is still tough and am not been able to check out that It works on all the scenarios. Code: [ProjectAnalyzer](https://github.com/kanak8278/MetaGPT/blob/55f278cda3611b71ad881b97dbf75c9d55a4c938/metagpt/roles/project_analyzer.py)
+> We need to make this part run compulsorily, but the generated workspace access is only inside the [SoftwareCompany](https://github.com/kanak8278/MetaGPT/blob/55f278cda3611b71ad881b97dbf75c9d55a4c938/startup.py#L38) class and that is depended on `n_rounds` parameter.
 
 > Also, I wanted to run this analysis after generation of each file, but the way `pylint` works is that it looks into the whole project code and once and running of individual files independently would give irrelevant warnings. 
 
@@ -51,9 +52,9 @@ Insight Point-13 makes more sense.
 8. Other than Sudoku Project, I also tried with 2048 game, as it was the example mentioned in the paper. It didn't ran out of box.
 
 9. I also tried with a project which would not be very general, "Courses Review Webapp like IMDB". Didn't created any entry file, metaGPT missed multiple DataModels definitions, API definition, import error, etc. Also it didn't defined an entrypoint to insert a new course.
-When I gave a more explained prompt for making different end points and functionalities of insert, update, post review etc. It created the architecture for them but still lacked in the DataModel definition, import error, etc.
+When I gave a more explained prompt for making different end points and functionalities of insert, update, post review etc. It created the architecture for them but still lacked in the DataModel definition, import error, etc. [Course_Review_Webapp](workspace/course_review_webapp)
 
-10. The issue that model is several time lacking information of the software need to be coded, I added prompt to add more information about the working in write_prd.py. [Explaination](MetaGPT/metagpt/actions/write_prd.py/#L156).
+10. The issue that model is several time lacking information of the software need to be coded, I added prompt to add more information about the working in write_prd.py. [Explaination](https://github.com/kanak8278/MetaGPT/blob/55f278cda3611b71ad881b97dbf75c9d55a4c938/metagpt/actions/write_prd.py/#L156).
 
 
 Complete Logs:
